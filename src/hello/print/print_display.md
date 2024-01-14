@@ -22,7 +22,9 @@ impl fmt::Display for Structure {
         // stream: `f`. Returns `fmt::Result` which indicates whether the
         // operation succeeded or failed. Note that `write!` uses syntax which
         // is very similar to `println!`.
-        write!(f, "{}", self.0)
+        return write!(f, "{}", self.0);
+        // or you can write just the line below, expression will be returned automatically
+        // write!(f, "{}", self.0)  // no semicolon
     }
 }
 ```
